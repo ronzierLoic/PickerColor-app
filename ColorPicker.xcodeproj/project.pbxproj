@@ -12,6 +12,7 @@
 		08FE244621F9A4CF005F9028 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FE244421F9A4CF005F9028 /* Main.storyboard */; };
 		08FE244821F9A4D1005F9028 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FE244721F9A4D1005F9028 /* Assets.xcassets */; };
 		08FE244B21F9A4D1005F9028 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FE244921F9A4D1005F9028 /* LaunchScreen.storyboard */; };
+		08FE245421F9A89F005F9028 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FE245321F9A89F005F9028 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		08FE244721F9A4D1005F9028 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08FE244A21F9A4D1005F9028 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08FE244C21F9A4D1005F9028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08FE245321F9A89F005F9028 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				08FE244721F9A4D1005F9028 /* Assets.xcassets */,
 				08FE244921F9A4D1005F9028 /* LaunchScreen.storyboard */,
 				08FE244C21F9A4D1005F9028 /* Info.plist */,
+				08FE245321F9A89F005F9028 /* Colors.xcassets */,
 			);
 			path = ColorPicker;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08FE244B21F9A4D1005F9028 /* LaunchScreen.storyboard in Resources */,
+				08FE245421F9A89F005F9028 /* Colors.xcassets in Resources */,
 				08FE244821F9A4D1005F9028 /* Assets.xcassets in Resources */,
 				08FE244621F9A4CF005F9028 /* Main.storyboard in Resources */,
 			);
