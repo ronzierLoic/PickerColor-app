@@ -9,34 +9,29 @@
 import UIKit
 
 
-protocol ColorPickerDelegate {
-    func userDidChooseColor(color: UIColor)
-}
-
 class ColorPickerViewController: UIViewController {
     
     @IBOutlet weak var buttonColorGreen: UIButton!
     @IBOutlet weak var buttonColorOrange: UIButton!
     @IBOutlet weak var buttonColorPurple: UIButton!
     
-    var delegate: ColorPickerDelegate!
-
+    var completionHandler: ((UIColor) -> ())!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
     @IBAction func clickButtonColorGreen(_ sender: Any) {
-        delegate.userDidChooseColor(color: ColorAsset.green.color)
-        
+      completionHandler(UIColor(named: "green")!)
     }
     
     @IBAction func clickButtonColorOrange(_ sender: Any) {
-        delegate.userDidChooseColor(color: ColorAsset.orange.color)
+      completionHandler(UIColor(named: "orange")!)
     }
     
     @IBAction func clickButtonColorPurple(_ sender: Any) {
-        delegate.userDidChooseColor(color: ColorAsset.purple.color)
+        completionHandler(UIColor(named: "purple")!)
     }
     
 }

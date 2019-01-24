@@ -22,14 +22,14 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "pickColor"){
             let colorPickerView = segue.destination as! ColorPickerViewController
-            colorPickerView.delegate = self
+            colorPickerView.completionHandler = userDidChooseColor
         }
     }
 
 }
 
 
-extension ViewController: ColorPickerDelegate {
+extension ViewController {
     
     func userDidChooseColor(color: UIColor) {
         self.view.backgroundColor = color
