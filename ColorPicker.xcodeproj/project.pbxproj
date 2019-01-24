@@ -15,6 +15,7 @@
 		08FE245421F9A89F005F9028 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FE245321F9A89F005F9028 /* Colors.xcassets */; };
 		08FE245721F9AAEB005F9028 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FE245621F9AAEB005F9028 /* ColorPickerViewController.swift */; };
 		08FE245A21F9B6C0005F9028 /* ColorAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FE245921F9B6C0005F9028 /* ColorAssets.swift */; };
+		D9B67FADB9F5634B03752E80 /* Pods_ColorPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59CB983DE5EA404D530EDC7 /* Pods_ColorPicker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		08FE245321F9A89F005F9028 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		08FE245621F9AAEB005F9028 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		08FE245921F9B6C0005F9028 /* ColorAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAssets.swift; sourceTree = "<group>"; };
+		1337EA6A8188FD1637BF65B6 /* Pods-ColorPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ColorPicker/Pods-ColorPicker.release.xcconfig"; sourceTree = "<group>"; };
+		B59CB983DE5EA404D530EDC7 /* Pods_ColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF80F4A2F71C1CB514A167BB /* Pods-ColorPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ColorPicker/Pods-ColorPicker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B67FADB9F5634B03752E80 /* Pods_ColorPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				08FE243F21F9A4CF005F9028 /* ColorPicker */,
 				08FE243E21F9A4CF005F9028 /* Products */,
+				ECC8CC44CFE110E32A90E110 /* Pods */,
+				9A9A7BE5275E43ED0FA6875D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +96,23 @@
 			path = asset;
 			sourceTree = "<group>";
 		};
+		9A9A7BE5275E43ED0FA6875D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B59CB983DE5EA404D530EDC7 /* Pods_ColorPicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECC8CC44CFE110E32A90E110 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF80F4A2F71C1CB514A167BB /* Pods-ColorPicker.debug.xcconfig */,
+				1337EA6A8188FD1637BF65B6 /* Pods-ColorPicker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08FE244F21F9A4D1005F9028 /* Build configuration list for PBXNativeTarget "ColorPicker" */;
 			buildPhases = (
+				60E7E1AE1228363745D05313 /* [CP] Check Pods Manifest.lock */,
 				08FE243921F9A4CF005F9028 /* Sources */,
 				08FE243A21F9A4CF005F9028 /* Frameworks */,
 				08FE243B21F9A4CF005F9028 /* Resources */,
+				7AA8EBCD63ECC76AA2D9A43B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +181,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60E7E1AE1228363745D05313 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ColorPicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AA8EBCD63ECC76AA2D9A43B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ColorPicker/Pods-ColorPicker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ColorPicker/Pods-ColorPicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		08FE243921F9A4CF005F9028 /* Sources */ = {
@@ -308,6 +373,7 @@
 		};
 		08FE245021F9A4D1005F9028 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF80F4A2F71C1CB514A167BB /* Pods-ColorPicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -325,6 +391,7 @@
 		};
 		08FE245121F9A4D1005F9028 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1337EA6A8188FD1637BF65B6 /* Pods-ColorPicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
