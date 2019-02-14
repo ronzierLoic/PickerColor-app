@@ -23,15 +23,15 @@ class ColorPickerViewController: UIViewController {
     }
     
     @IBAction func clickButtonColorGreen(_ sender: Any) {
-      completionHandler(UIColor(named: "green")!)
+      completionHandler(ColorAsset.green.color)
     }
     
     @IBAction func clickButtonColorOrange(_ sender: Any) {
-      completionHandler(UIColor(named: "orange")!)
+      completionHandler(ColorAsset.orange.color)
     }
     
     @IBAction func clickButtonColorPurple(_ sender: Any) {
-        completionHandler(UIColor(named: "purple")!)
+        completionHandler(ColorAsset.purple.color)
     }
     
 }
