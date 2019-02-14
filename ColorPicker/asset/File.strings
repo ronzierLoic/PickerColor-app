@@ -1,0 +1,13 @@
+/* 
+  File.strings
+  ColorPicker
+
+  Created by lpiem on 14/02/2019.
+  Copyright © 2019 lpiem. All rights reserved.
+*/
+
+
+"dialog-title" = "Confirmation";
+"dialog-message" = "Conserver le changement de couleur ?";
+"dialog-button-yes" = "Oui";
+"dialog-button-no" = "Non";

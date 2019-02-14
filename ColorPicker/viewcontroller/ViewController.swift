@@ -11,21 +11,20 @@ import UIKit
 
 
 class ViewController: UIViewController {
-
-    var currentColor: UIColor = UIColor(named: "green")!
+    
+    var currentColor: UIColor = R.color.green()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "pickColor"){
             let colorPickerView = segue.destination as! ColorPickerViewController
             colorPickerView.completionHandler = userDidChooseColor
         }
     }
-
+    
 }
 
 
@@ -34,20 +33,20 @@ extension ViewController {
     func userDidChooseColor(color: UIColor) {
         self.view.backgroundColor = color
         self.dismiss(animated: false, completion: nil)
-        let alert = UIAlertController(title: "Confirmation", message: "Conserver le changement de couleur ?", preferredStyle: .alert)
+        let alert = UIAlertController(title: R.string.file.dialogTitle(), message: R.string.file.dialogMessage(), preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {action in self.currentColor = color}))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {
+        alert.addAction(UIAlertAction(title: R.string.file.dialogButtonYes(), style: .default, handler: {action in self.currentColor = color}))
+        alert.addAction(UIAlertAction(title: R.string.file.dialogButtonNo(), style: .cancel, handler: {
             action in
             UIView.animate(withDuration: 1.0, delay: 0.0, animations:
                 {
                     self.view.backgroundColor = self.currentColor
-                }, completion:nil)
+            }, completion:nil)
         }
         ))
         
         self.present(alert, animated: true)
     }
     
-
+    
 }

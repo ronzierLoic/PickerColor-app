@@ -19,20 +19,20 @@ class ColorPickerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func clickButtonColorGreen(_ sender: Any) {
-      completionHandler(UIColor(named: "green")!)
+      completionHandler(R.color.green()!)
     }
     
     @IBAction func clickButtonColorOrange(_ sender: Any) {
-      completionHandler(UIColor(named: "orange")!)
+      completionHandler(R.color.orange()!)
     }
     
     @IBAction func clickButtonColorPurple(_ sender: Any) {
-        completionHandler(UIColor(named: "purple")!)
+        completionHandler(R.color.purple()!)
     }
     
 }
+
 
